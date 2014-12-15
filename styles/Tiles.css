@@ -1,4 +1,4 @@
-.gridLines {
+html, body, .gridLines {
     margin: auto;
     text-align: center;
     border-width: 1px;
