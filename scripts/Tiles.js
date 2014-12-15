@@ -163,6 +163,8 @@ $('body').on('click', '.tiles', function () {
         $(".successContainer, .successContainerBackground").removeClass("hide");
 
     }
+
+    setAspectRatio();
 });
 
 function gameCompleted() {
