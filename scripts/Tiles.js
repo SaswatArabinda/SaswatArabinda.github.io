@@ -151,11 +151,10 @@ $('body').on('click', '.tiles', function () {
     }
     if (flag) {
         swap($(this));
+        // display game count
+        config.count = config.count + 1;
+        $(".count").text(config.count);
     }
-
-    // display game count
-    config.count = config.count + 1;
-    $(".count").text(config.count);
 
     // Check if the game ends or not
     var isGameCompleted = gameCompleted();
