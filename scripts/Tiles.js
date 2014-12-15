@@ -2,7 +2,7 @@ var config = {
     noOfColumns: 3,
     noOfRows: 4,
     imageRotation: false, // no of rows > no of columns
-	count:0
+    count: 0
 };
 
 // Returns the height of the browser
@@ -11,11 +11,9 @@ function getHeight() {
     if (self.innerHeight) {
         return self.innerHeight;
     }
-
     if (document.documentElement && document.documentElement.clientHeight) {
         return document.documentElement.clientHeight;
     }
-
     if (document.body) {
         return document.body.clientHeight;
     }
@@ -38,14 +36,6 @@ function getWidth() {
 function setAspectRatio() {
     var nCurrentBrowserWidth = getWidth();
     var nCurrentBrowserHeight = getHeight();
-
-    //if (config.imageRotation) { 
-    //    var containerWidth = ($(window).height() / config.noOfColumns) * config.noOfRows;
-    //} else {
-    //    var containerWidth = ($(window).height() / config.noOfRows) * config.noOfColumns;
-    //}
-
-
     if (config.imageRotation) {
         // i.e. No of rows < No of columns
     } else {
@@ -55,7 +45,6 @@ function setAspectRatio() {
             //calculate width
             var containerHeight = getHeight();
             var containerWidth = (containerHeight / config.noOfRows) * config.noOfColumns;
-
         } else {
             // width will be same as the browser width
             //calculate height
@@ -82,10 +71,10 @@ function shuffle(o) { //v1.0
 
 
 function createGrid() {
-// update count
-config.count = 0;
-		$(".count").text(config.count);
-		
+    // update count
+    config.count = 0;
+    $(".count").text(config.count);
+
     var myArray = [];//['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'];
     var totalNoOfElements = config.noOfColumns * config.noOfRows;
     for (var i = 1; i < totalNoOfElements; i++) {
@@ -99,7 +88,6 @@ config.count = 0;
         $(".gridLines").append("<div class='tiles' id = " + parseInt(index + 1) + "><span class='value'>" + value + "</span></div>");
     });
     $(".gridLines").append("<div class='tiles empty' id=" + totalNoOfElements + "><span class='value'></span></div>");
-
     setAspectRatio();
 
 }
@@ -127,8 +115,6 @@ function getTilePosition(selectedValue) {
             flag = true;
             console.log("leftMost");
             tilePos = "leftMost";
-
-
         }
     });
 
@@ -138,7 +124,6 @@ function getTilePosition(selectedValue) {
             flag = true;
             console.log("rightMost");
             tilePos = "rightMost";
-
         }
     });
 
@@ -146,9 +131,7 @@ function getTilePosition(selectedValue) {
         console.log("middle");
         tilePos = "middle";
     }
-
     return tilePos;
-
 }
 
 
@@ -168,12 +151,10 @@ $('body').on('click', '.tiles', function () {
 
     var tilePos = getTilePosition(selectedValue);
     if (tilePos == "leftMost") {
-
         if ($("#" + aboveTile).hasClass("empty") || $("#" + belowTile).hasClass("empty") || $("#" + nextTile).hasClass("empty")) {
             flag = true;
         }
     } else if (tilePos == "rightMost") {
-
         if ($("#" + aboveTile).hasClass("empty") || $("#" + belowTile).hasClass("empty") || $("#" + prevTile).hasClass("empty")) {
             flag = true;
         }
@@ -186,33 +167,32 @@ $('body').on('click', '.tiles', function () {
     if (flag) {
         swap($(this));
     }
-	
-	// display game count
-	config.count = config.count+1;
-	$(".count").text(config.count);
-	
-	// Check if the game ends or not
-	var isGameCompleted = gameCompleted();
-	if(isGameCompleted){
-	$(".successContainer, .successContainerBackground").removeClass("hide");
-	
-	}
+
+    // display game count
+    config.count = config.count + 1;
+    $(".count").text(config.count);
+
+    // Check if the game ends or not
+    var isGameCompleted = gameCompleted();
+    if (isGameCompleted) {
+        $(".successContainer, .successContainerBackground").removeClass("hide");
+
+    }
 });
 
-function gameCompleted(){
-	var myArray = [];//['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'];
-	var flag = true;
+function gameCompleted() {
+    var myArray = [];//['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'];
+    var flag = true;
     var totalNoOfElements = config.noOfColumns * config.noOfRows;
     for (var i = 1; i < totalNoOfElements; i++) {
         myArray.push(i);
     }
-	$.each($(".tiles"),function(index,value){
-		if($(this).text != myArray[index]){
-			flag = false;
-		}
-	});
-
-	return flag;
+    $.each($(".tiles"), function (index, value) {
+        if ($(this).text() != myArray[index] && myArray.length != index) {
+            flag = false;
+        }
+    });
+    return flag;
 }
 
 function swap(currTile) {
@@ -223,10 +203,10 @@ function swap(currTile) {
 }
 
 
-$(".restart").click(function(){
-	$(".successContainer, .successContainerBackground").addClass("hide");
-	    $(".gridLines").text("");
-		createGrid();
+$(".restart").click(function () {
+    $(".successContainer, .successContainerBackground").addClass("hide");
+    $(".gridLines").text("");
+    createGrid();
 });
 
 $(document).ready(function (event) {
@@ -236,5 +216,4 @@ $(document).ready(function (event) {
 
 $(window).on("resize", function (event) {
     setAspectRatio();
-
 });
