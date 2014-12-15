@@ -1,54 +1,47 @@
 .gridLines {
     margin: auto;
     text-align: center;
-    /* border: solid; */
     border-width: 1px;
-    /* display: initial; */
     min-height: 323px;
     min-width: 247px;
-	width:calc(100% - 32px);
+    width: calc(100% - 32px);
 }
 
 html, body {
-    /* height: 97%; */
-    /* width: 97%; */
     background-color: aliceblue;
-    /* min-height: 300px !important; */
     font-size: 40pt;
 }
 
 .successContainer {
-	background-color: #fff;
-	bottom: 0;
-
-	height: 131px;
-	left: 0;
-	margin: auto;
-
-	padding: 15px;
-
-	position: fixed;
-	right: 0;
-
-	text-align: center;
-	top: 0;
-	width: calc(100% - 32px);
-	z-index: 999;
-	min-width: 250px;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
+    background-color: #fff;
+    bottom: 0;
+    height: 131px;
+    left: 0;
+    margin: auto;
+    padding: 15px;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: calc(100% - 32px);
+    z-index: 999;
+    min-width: 250px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
 }
-.successContainerBackground{
-	background-color: #000;
-	height: 100%;
-	opacity: 0.4;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 998;
+
+.successContainerBackground {
+    background-color: #000;
+    height: 100%;
+    opacity: 0.4;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 998;
 }
+
 .tiles {
     float: left;
     border: solid;
@@ -58,37 +51,30 @@ html, body {
     cursor: pointer;
     background: #1570a6;
     color: #fff;
-    /* text-align: justify; */
     padding: initial;
 }
 
-.tiles:hover, .restart:hover{
-background:#000;
-}
+    .tiles:hover, .restart:hover {
+        background: #000;
+    }
 
-
-
-.hide{
-	display:none; 
+.hide {
+    display: none;
 }
 
 .restart {
-background: #1570a6;
-max-height: 60px;
-font-size: 28px;
-bottom: 0;
-margin: 22px 0 0 0;
-cursor: pointer;
-text-align: center;
-color: white;
+    background: #1570a6;
+    max-height: 60px;
+    font-size: 28px;
+    bottom: 0;
+    margin: 22px 0 0 0;
+    cursor: pointer;
+    text-align: center;
+    color: white;
 }
 
-.steps{
-font-size: 15pt;
-color: red;
-text-align: right;
-}
-
-.value{
-
+.steps {
+    font-size: 15pt;
+    color: red;
+    text-align: right;
 }
