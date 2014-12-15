@@ -36,31 +36,16 @@ function getWidth() {
 function setAspectRatio() {
     var nCurrentBrowserWidth = getWidth();
     var nCurrentBrowserHeight = getHeight();
-    if (config.imageRotation) {
-        // i.e. No of rows < No of columns
-    } else {
-        // i.e. No of rows > No of columns
-        if (nCurrentBrowserWidth > nCurrentBrowserHeight) {
-            // height will be same as the browser height
-            //calculate width
-            var containerHeight = getHeight();
-            var containerWidth = (containerHeight / config.noOfRows) * config.noOfColumns;
-        } else {
-            // width will be same as the browser width
-            //calculate height
-            var containerWidth = getWidth();
-            var containerHeight = (containerWidth / config.noOfColumns) * config.noOfRows;
-        }
-    }
+    var width = ($(".gridLines").width() / config.noOfColumns) * config.noOfRows;
+    $(".gridLines").css("height", width + "px");
 
-    $(".gridLines").css("width", containerWidth + "px");
-    $(".gridLines").css("height", containerHeight + "px");
-
-    var tilesWidth = 73 / config.noOfColumns;
-    var tilesHeight = 75 / config.noOfRows;
-
+    var tilesWidth = 100 / config.noOfColumns;
     $(".tiles").css("width", tilesWidth + "%");
-    $(".tiles").css("height", tilesHeight + "%");
+    var height = $(".tiles").width();
+    $(".tiles").css("height", height + "px");
+
+    $(".value").css("height", height + "px");
+    $(".value").css("line-height", height + "px")
 }
 
 // shuffles the array elements
