@@ -1,8 +1,0 @@
-// Idea is to create a game where a picture will be displayed in a 3X4 matrices 
-// In 3X4 matrices, one place will be blank. using that place user will rearrange the tiles to create the complete picture
-// 
-
-step1: how to set the grid position 
-		grid should be centrally aligned
-		on resize of the browser, it should automatically get resized
-		
