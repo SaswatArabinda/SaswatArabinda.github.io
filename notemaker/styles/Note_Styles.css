@@ -3,15 +3,7 @@
 }
 
 .Wrapper {
-    background-image: url('../media/paper.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    -o-background-size: 100% 100%, auto;
-    -moz-background-size: 100% 100%, auto;
-    -webkit-background-size: 100% 100%, auto;
-    background-size: 100% 100%, auto;
-    height:800px;
+
 }
 
 .Validation {
@@ -40,42 +32,26 @@ body {
 }
 
 .NoteHeaderSection, .SavedNote {
-    display: table;
-    margin: auto;
+/*    display: table;
+    margin: auto;*/
 }
 
 .NoteHeader {
-    display: table-caption;
-    text-align: center;
-    width: 600px;
-    margin: auto;
-    font-size: 30px;
-    color: grey;
+    top: 10px;
+    right: 20px;
+    float: right;
 }
 
 .NoteHeaderSection {
-    display: table;
+/*    display: table;
     width: 1000px;
     margin: 0 auto;
-    margin-bottom: 20px;
-}
-
-.MainHeader {
-    text-align: center;
-    font-size: 80px;
+    margin-bottom: 20px;*/
 }
 
 .IndividualNote > div {
     float: left;
     box-sizing: border-box;
-}
-
-.IndividualNote {
-    width: 1000px;
-    border: solid;
-    min-height: 60px;
-    padding: 10px;
-    margin-bottom: 10px;
 }
 
 .E_NoteTitle {
@@ -86,10 +62,6 @@ body {
 .E_NoteDescription {
     font-weight: lighter;
     font-style: italic;
-}
-
-.IndividualNote:hover {
-    background-color: rgba(219, 214, 205, 1);
 }
 
 .IndividualNote:after {
@@ -108,7 +80,7 @@ body {
 .EditNoteSection {
     width: 500px;
     margin: auto;
-    margin-top: 200px;
+    margin-top: 30px;
 }
 
     .EditNoteSection > * {
@@ -119,20 +91,6 @@ body {
     margin-bottom: 10px;
 }
 
-.Buttons {
-    background: white;
-    color: grey;
-    margin: 5px;
-    cursor: pointer;
-    text-align: center;
-    padding: 5px;
-    border: solid;
-    width: 100%;
-    float: left;
-    box-sizing: border-box;
-    width: 36%;
-    border-radius: 5px;
-}
 
     .Buttons:nth-child(2) {
         float: right;
@@ -145,7 +103,6 @@ body {
 
 .E_Buttons {
     background: white;
-    color: black;
     cursor: pointer;
     padding: 5px;
     float: right;
@@ -172,4 +129,13 @@ body {
 .Buttons:hover, .E_Buttons:hover {
     background: black;
     color: white;
+}
+
+
+.Wrapper{
+    max-width: 500px;
+    margin: 0 auto;
+}
+.buttonWrapper{
+    margin-bottom: 20px;
 }

@@ -42,8 +42,8 @@ var NoteMaker = {
                             '<div id="E_NoteDescription" class="E_NoteDescription">{description}</div>' +
                         '</div>' +
                         '<div class="Buttons_Pane">' +
-                            '<div class="Buttons" onclick="NoteMaker.EditNote(event, {id})">Edit</div>' +
-                            '<div class="Buttons" onclick="NoteMaker.DeleteNote(event, {id})">Delete</div>' +
+                            '<button type="button"  class="btn btn-primary btn-block Buttons" onclick="NoteMaker.EditNote(event, {id})">Edit</button>' +
+                            '<button type="button"  class="btn btn-primary btn-block Buttons" onclick="NoteMaker.DeleteNote(event, {id})">Delete</button>' +
                         '</div>',
 
         NoteHeaderNoNote: 'No Notes Present. Click on <b>Add a Note</b>',
@@ -178,7 +178,7 @@ var NoteMaker = {
         var sNewNoteChunk = this.NoteMyNotes.NoteListChunk.replace(/{id}/g, oNote.Id).replace("{title}", oNote.Title).replace('{description}', oNote.Description);
         var oParent = document.getElementById('SavedNote');
         var oNewNoteDiv = document.createElement('div');
-        oNewNoteDiv.className = 'IndividualNote';
+        oNewNoteDiv.className = 'panel panel-default IndividualNote';
         oNewNoteDiv.innerHTML = sNewNoteChunk;
         oParent.insertBefore(oNewNoteDiv, oParent.firstChild);
     },
