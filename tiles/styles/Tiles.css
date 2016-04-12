@@ -1,0 +1,94 @@
+html, body, .gridLines {
+    margin: auto;
+    text-align: center;
+    border-width: 1px;
+    min-height: 323px;
+    min-width: 247px;
+    width: calc(100% - 32px);
+    width: 100% !important;
+    max-width: 340px;
+}
+
+html, body {
+    background-color: aliceblue;
+    font-size: 40pt;
+}
+
+.successContainer {
+    background-color: #fff;
+    bottom: 0;
+    height: 131px;
+    left: 0;
+    margin: auto;
+    padding: 15px;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: calc(100% - 32px);
+    z-index: 999;
+    min-width: 250px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+}
+
+.successContainerBackground {
+    background-color: #000;
+    height: 100%;
+    opacity: 0.4;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 998;
+    left: 0;
+}
+
+.tiles {
+    float: left;
+    padding: 2%;
+    cursor: pointer;
+    background: #1570a6;
+    color: #fff;
+    padding: initial;
+    height: !important;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    max-width: 150px;
+}
+
+    .tiles:hover {
+       
+        opacity:0.8;
+    }
+
+.restart:hover {
+    background: #000;
+}
+
+.hide {
+    display: none;
+}
+
+.restart {
+    background: #1570a6;
+    max-height: 58px;
+    font-size: 28px;
+    bottom: 0;
+    margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.steps {
+    font-size: 15pt;
+    color: red;
+    text-align: right;
+}

@@ -1,0 +1,175 @@
+* {
+    transition: all 0.4s;
+}
+
+.Wrapper {
+    background-image: url('../media/paper.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -o-background-size: 100% 100%, auto;
+    -moz-background-size: 100% 100%, auto;
+    -webkit-background-size: 100% 100%, auto;
+    background-size: 100% 100%, auto;
+    height:800px;
+}
+
+.Validation {
+    color: red;
+    display: none;
+}
+
+body {
+    font-family: wf_segoe-ui_normal, Tahoma, Verdana, Arial, sans-serif;
+    font-size: 13px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+}
+
+.EditSection {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    display: none;
+    background-color: rgba(22,22,22,0.8);
+    text-align: center;
+}
+
+.NoteHeaderSection, .SavedNote {
+    display: table;
+    margin: auto;
+}
+
+.NoteHeader {
+    display: table-caption;
+    text-align: center;
+    width: 600px;
+    margin: auto;
+    font-size: 30px;
+    color: grey;
+}
+
+.NoteHeaderSection {
+    display: table;
+    width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.MainHeader {
+    text-align: center;
+    font-size: 80px;
+}
+
+.IndividualNote > div {
+    float: left;
+    box-sizing: border-box;
+}
+
+.IndividualNote {
+    width: 1000px;
+    border: solid;
+    min-height: 60px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.E_NoteTitle {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.E_NoteDescription {
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.IndividualNote:hover {
+    background-color: rgba(219, 214, 205, 1);
+}
+
+.IndividualNote:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.E_Note {
+    width: 70%;
+    padding: 5px;
+}
+
+
+.EditNoteSection {
+    width: 500px;
+    margin: auto;
+    margin-top: 200px;
+}
+
+    .EditNoteSection > * {
+        margin-bottom: 20px;
+    }
+
+#EditTitle {
+    margin-bottom: 10px;
+}
+
+.Buttons {
+    background: white;
+    color: grey;
+    margin: 5px;
+    cursor: pointer;
+    text-align: center;
+    padding: 5px;
+    border: solid;
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    width: 36%;
+    border-radius: 5px;
+}
+
+    .Buttons:nth-child(2) {
+        float: right;
+    }
+
+.Buttons_Pane {
+    padding: 5px;
+    width: 30%;
+}
+
+.E_Buttons {
+    background: white;
+    color: black;
+    cursor: pointer;
+    padding: 5px;
+    float: right;
+    width: 30%;
+    border: solid;
+}
+
+    .E_Buttons:hover {
+        border-radius: 5px;
+    }
+
+    .E_Buttons:first-child {
+        float: left;
+    }
+
+#EditDescription {
+    height: 150px;
+}
+
+#EditTitle, #EditDescription {
+    width: 98%;
+}
+
+.Buttons:hover, .E_Buttons:hover {
+    background: black;
+    color: white;
+}

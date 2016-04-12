@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Note my Notes</title>
+    
+    <link rel="stylesheet" type="text/css" href="styles/Note_Styles.css" />
+</head>
+
+<body>
+
+    <section class="Wrapper">
+        <section class="NoteListSection">
+            <!-- Added Notes-->
+            <div class="MainHeader">Note my Notes...</div>
+
+            <div class="NoteHeaderSection">
+                <div id="NoteHeader" class="NoteHeader"></div>
+                <div class="Buttons" onclick="NoteMaker.AddNote()">Add a Note</div>
+                <div id="DelButton" class="Buttons" onclick="NoteMaker.DeleteAllNotes()">Delete All Notes</div>
+            </div>
+            <div id="SavedNote" class="SavedNote">
+            </div>
+        </section>
+
+        <section id="EditSection" class="EditSection">
+            <div class="TitleSection">
+                <div>Note my Notes</div>
+            </div>
+            <div class="EditNoteSection">
+                <input id="EditTitle" type="text" placeholder="Title" />
+                <textarea id="EditDescription" placeholder="Description"></textarea>
+                <div id="Validation" class="Validation"></div>
+                <div>
+                    <div id="SaveAddEdit" class="E_Buttons">Save</div>
+                    <div id="CancelAddEdit" class="E_Buttons" onclick="NoteMaker.ClosePopup()">Cancel</div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <script src="scripts/note_script.js"></script>
+</body>
+
+</html>
