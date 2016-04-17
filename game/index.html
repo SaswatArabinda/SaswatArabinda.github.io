@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrange Me</title>
+
+    <link rel="stylesheet" type="text/css" href="styles/Tiles.css" />
+</head>
+
+<body onload="startGame()">
+
+<div style="text-align:center;width:480px;">
+  <button onmousedown="moveup()" onmouseup="stopMove()" ontouchstart="moveup()">UP</button><br><br>
+  <button onmousedown="moveleft()" onmouseup="stopMove()" ontouchstart="moveleft()">LEFT</button>
+  <button onmousedown="moveright()" onmouseup="stopMove()" ontouchstart="moveright()">RIGHT</button><br><br>
+  <button onmousedown="movedown()" onmouseup="stopMove()" ontouchstart="movedown()">DOWN</button>
+</div>
+    <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script> -->
+    <script src="scripts/Tiles.js"></script>
+</body>
+
+</html>
