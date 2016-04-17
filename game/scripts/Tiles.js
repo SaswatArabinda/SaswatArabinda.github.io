@@ -75,10 +75,10 @@ function updateGameArea() {
         myGameArea.clear();
         myGamePiece.speedX = 0;
         myGamePiece.speedY = 0; 
-        if (myGameArea.keys && myGameArea.keys[37]) {myGamePiece.speedX = -1; }
-        if (myGameArea.keys && myGameArea.keys[39]) {myGamePiece.speedX = 1; }
-        if (myGameArea.keys && myGameArea.keys[38]) {myGamePiece.speedY = -1; }
-        if (myGameArea.keys && myGameArea.keys[40]) {myGamePiece.speedY = 1; }
+        if (myGameArea.keys && myGameArea.keys[37]) {myGamePiece.speedX = -2; }
+        if (myGameArea.keys && myGameArea.keys[39]) {myGamePiece.speedX = 2; }
+        if (myGameArea.keys && myGameArea.keys[38]) {myGamePiece.speedY = -2; }
+        if (myGameArea.keys && myGameArea.keys[40]) {myGamePiece.speedY = 2; }
 
         myObstacle.x += -1;
         myObstacle.update();
