@@ -251,6 +251,8 @@ img.icon:hover {
     padding-top: 20px;
     font-size: 12px;
     line-height: 20px;
+    position: absolute;
+    width: 100%;
 }
 /*TOC*/
 
